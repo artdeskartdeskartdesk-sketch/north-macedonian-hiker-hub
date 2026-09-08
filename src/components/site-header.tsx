@@ -2,10 +2,12 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 
 const nav = [
-  { to: "/vesti", label: "Вести" },
+  { to: "/vesti", label: "Новости" },
   { to: "/kalendar", label: "Календар" },
-  { to: "/klubovi", label: "Клубови" },
-  { to: "/obuki", label: "Обуки" },
+  { to: "/komisii", label: "Комисии" },
+  { to: "/klubovi", label: "Членки" },
+  { to: "/obuki", label: "ЦСО / Обуки" },
+  { to: "/pateki-domovi", label: "Патеки и домови" },
   { to: "/za-nas", label: "За нас" },
   { to: "/kontakt", label: "Контакт" },
 ] as const;
@@ -25,12 +27,12 @@ export function SiteHeader() {
               ФПСМ
             </span>
             <span className="block text-[11px] text-snow/60">
-              Федерација за планинарски спорт
+              Федерација за планинарство на Северна Македонија
             </span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex">
+        <nav className="hidden items-center gap-5 xl:flex">
           {nav.map((item) => (
             <Link
               key={item.to}
@@ -48,13 +50,13 @@ export function SiteHeader() {
             to="/klubovi"
             className="hidden rounded-md bg-signal px-4 py-2 font-display text-sm font-medium text-signal-foreground transition-opacity hover:opacity-90 sm:inline-block"
           >
-            Зачлени се
+            Зачленување
           </Link>
           <button
             type="button"
             aria-label="Мени"
             onClick={() => setOpen((v) => !v)}
-            className="rounded-md border border-snow/25 px-3 py-2 text-sm text-snow lg:hidden"
+            className="rounded-md border border-snow/25 px-3 py-2 text-sm text-snow xl:hidden"
           >
             Мени
           </button>
@@ -62,7 +64,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <nav className="grid gap-1 border-t border-snow/10 px-6 pb-4 pt-2 lg:hidden">
+        <nav className="grid gap-1 border-t border-snow/10 px-6 pb-4 pt-2 xl:hidden">
           {nav.map((item) => (
             <Link
               key={item.to}
