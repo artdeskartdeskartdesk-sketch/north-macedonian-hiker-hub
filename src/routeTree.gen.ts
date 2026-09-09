@@ -10,33 +10,141 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as KalendarRouteImport } from './routes/kalendar'
+import { Route as KluboviRouteImport } from './routes/klubovi'
+import { Route as KomisiiRouteImport } from './routes/komisii'
+import { Route as KontaktRouteImport } from './routes/kontakt'
+import { Route as ObukiRouteImport } from './routes/obuki'
+import { Route as PatekiDomoviRouteImport } from './routes/pateki-domovi'
+import { Route as VestiRouteImport } from './routes/vesti'
+import { Route as ZaNasRouteImport } from './routes/za-nas'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KalendarRoute = KalendarRouteImport.update({
+  id: '/kalendar',
+  path: '/kalendar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KluboviRoute = KluboviRouteImport.update({
+  id: '/klubovi',
+  path: '/klubovi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KomisiiRoute = KomisiiRouteImport.update({
+  id: '/komisii',
+  path: '/komisii',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KontaktRoute = KontaktRouteImport.update({
+  id: '/kontakt',
+  path: '/kontakt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ObukiRoute = ObukiRouteImport.update({
+  id: '/obuki',
+  path: '/obuki',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PatekiDomoviRoute = PatekiDomoviRouteImport.update({
+  id: '/pateki-domovi',
+  path: '/pateki-domovi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VestiRoute = VestiRouteImport.update({
+  id: '/vesti',
+  path: '/vesti',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ZaNasRoute = ZaNasRouteImport.update({
+  id: '/za-nas',
+  path: '/za-nas',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/kalendar': typeof KalendarRoute
+  '/klubovi': typeof KluboviRoute
+  '/komisii': typeof KomisiiRoute
+  '/kontakt': typeof KontaktRoute
+  '/obuki': typeof ObukiRoute
+  '/pateki-domovi': typeof PatekiDomoviRoute
+  '/vesti': typeof VestiRoute
+  '/za-nas': typeof ZaNasRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/kalendar': typeof KalendarRoute
+  '/klubovi': typeof KluboviRoute
+  '/komisii': typeof KomisiiRoute
+  '/kontakt': typeof KontaktRoute
+  '/obuki': typeof ObukiRoute
+  '/pateki-domovi': typeof PatekiDomoviRoute
+  '/vesti': typeof VestiRoute
+  '/za-nas': typeof ZaNasRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/kalendar': typeof KalendarRoute
+  '/klubovi': typeof KluboviRoute
+  '/komisii': typeof KomisiiRoute
+  '/kontakt': typeof KontaktRoute
+  '/obuki': typeof ObukiRoute
+  '/pateki-domovi': typeof PatekiDomoviRoute
+  '/vesti': typeof VestiRoute
+  '/za-nas': typeof ZaNasRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/kalendar'
+    | '/klubovi'
+    | '/komisii'
+    | '/kontakt'
+    | '/obuki'
+    | '/pateki-domovi'
+    | '/vesti'
+    | '/za-nas'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/kalendar'
+    | '/klubovi'
+    | '/komisii'
+    | '/kontakt'
+    | '/obuki'
+    | '/pateki-domovi'
+    | '/vesti'
+    | '/za-nas'
+  id:
+    | '__root__'
+    | '/'
+    | '/kalendar'
+    | '/klubovi'
+    | '/komisii'
+    | '/kontakt'
+    | '/obuki'
+    | '/pateki-domovi'
+    | '/vesti'
+    | '/za-nas'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  KalendarRoute: typeof KalendarRoute
+  KluboviRoute: typeof KluboviRoute
+  KomisiiRoute: typeof KomisiiRoute
+  KontaktRoute: typeof KontaktRoute
+  ObukiRoute: typeof ObukiRoute
+  PatekiDomoviRoute: typeof PatekiDomoviRoute
+  VestiRoute: typeof VestiRoute
+  ZaNasRoute: typeof ZaNasRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +156,75 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/kalendar': {
+      id: '/kalendar'
+      path: '/kalendar'
+      fullPath: '/kalendar'
+      preLoaderRoute: typeof KalendarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/klubovi': {
+      id: '/klubovi'
+      path: '/klubovi'
+      fullPath: '/klubovi'
+      preLoaderRoute: typeof KluboviRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/komisii': {
+      id: '/komisii'
+      path: '/komisii'
+      fullPath: '/komisii'
+      preLoaderRoute: typeof KomisiiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kontakt': {
+      id: '/kontakt'
+      path: '/kontakt'
+      fullPath: '/kontakt'
+      preLoaderRoute: typeof KontaktRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/obuki': {
+      id: '/obuki'
+      path: '/obuki'
+      fullPath: '/obuki'
+      preLoaderRoute: typeof ObukiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pateki-domovi': {
+      id: '/pateki-domovi'
+      path: '/pateki-domovi'
+      fullPath: '/pateki-domovi'
+      preLoaderRoute: typeof PatekiDomoviRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vesti': {
+      id: '/vesti'
+      path: '/vesti'
+      fullPath: '/vesti'
+      preLoaderRoute: typeof VestiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/za-nas': {
+      id: '/za-nas'
+      path: '/za-nas'
+      fullPath: '/za-nas'
+      preLoaderRoute: typeof ZaNasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  KalendarRoute: KalendarRoute,
+  KluboviRoute: KluboviRoute,
+  KomisiiRoute: KomisiiRoute,
+  KontaktRoute: KontaktRoute,
+  ObukiRoute: ObukiRoute,
+  PatekiDomoviRoute: PatekiDomoviRoute,
+  VestiRoute: VestiRoute,
+  ZaNasRoute: ZaNasRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
