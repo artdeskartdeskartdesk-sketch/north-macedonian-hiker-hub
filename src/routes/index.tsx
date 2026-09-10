@@ -30,7 +30,8 @@ const BRZI = [
 ] as const;
 
 function Index() {
-  const [glavna, ...ostanati] = VESTI;
+  const glavna = VESTI[0]!;
+  const ostanati = VESTI.slice(1);
 
   return (
     <>
