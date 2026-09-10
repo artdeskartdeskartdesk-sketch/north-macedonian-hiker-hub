@@ -43,7 +43,7 @@ function Kontakt() {
           <div className="mt-4 rounded-lg border border-destructive/30 bg-destructive/10 p-5">
             <p className="font-display text-lg">Итен повик во планина</p>
             <p className="mt-1 text-sm text-muted-foreground">
-              单 112 — центар за итни повици и планинско спасување.
+              Повик 112 — центар за итни повици и планинско спасување.
             </p>
           </div>
         </div>
