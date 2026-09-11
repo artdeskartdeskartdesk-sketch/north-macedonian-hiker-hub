@@ -18,6 +18,8 @@ import { Route as ObukiRouteImport } from './routes/obuki'
 import { Route as PatekiDomoviRouteImport } from './routes/pateki-domovi'
 import { Route as VestiRouteImport } from './routes/vesti'
 import { Route as ZaNasRouteImport } from './routes/za-nas'
+import { Route as KomisiiIndexRouteImport } from './routes/komisii.index'
+import { Route as KomisiiSlugRouteImport } from './routes/komisii.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -64,40 +66,55 @@ const ZaNasRoute = ZaNasRouteImport.update({
   path: '/za-nas',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KomisiiIndexRoute = KomisiiIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => KomisiiRoute,
+} as any)
+const KomisiiSlugRoute = KomisiiSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => KomisiiRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/kalendar': typeof KalendarRoute
   '/klubovi': typeof KluboviRoute
-  '/komisii': typeof KomisiiRoute
+  '/komisii': typeof KomisiiRouteWithChildren
   '/kontakt': typeof KontaktRoute
   '/obuki': typeof ObukiRoute
   '/pateki-domovi': typeof PatekiDomoviRoute
   '/vesti': typeof VestiRoute
   '/za-nas': typeof ZaNasRoute
+  '/komisii/$slug': typeof KomisiiSlugRoute
+  '/komisii/': typeof KomisiiIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/kalendar': typeof KalendarRoute
   '/klubovi': typeof KluboviRoute
-  '/komisii': typeof KomisiiRoute
   '/kontakt': typeof KontaktRoute
   '/obuki': typeof ObukiRoute
   '/pateki-domovi': typeof PatekiDomoviRoute
   '/vesti': typeof VestiRoute
   '/za-nas': typeof ZaNasRoute
+  '/komisii/$slug': typeof KomisiiSlugRoute
+  '/komisii': typeof KomisiiIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/kalendar': typeof KalendarRoute
   '/klubovi': typeof KluboviRoute
-  '/komisii': typeof KomisiiRoute
+  '/komisii': typeof KomisiiRouteWithChildren
   '/kontakt': typeof KontaktRoute
   '/obuki': typeof ObukiRoute
   '/pateki-domovi': typeof PatekiDomoviRoute
   '/vesti': typeof VestiRoute
   '/za-nas': typeof ZaNasRoute
+  '/komisii/$slug': typeof KomisiiSlugRoute
+  '/komisii/': typeof KomisiiIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -111,17 +128,20 @@ export interface FileRouteTypes {
     | '/pateki-domovi'
     | '/vesti'
     | '/za-nas'
+    | '/komisii/$slug'
+    | '/komisii/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/kalendar'
     | '/klubovi'
-    | '/komisii'
     | '/kontakt'
     | '/obuki'
     | '/pateki-domovi'
     | '/vesti'
     | '/za-nas'
+    | '/komisii/$slug'
+    | '/komisii'
   id:
     | '__root__'
     | '/'
@@ -133,13 +153,15 @@ export interface FileRouteTypes {
     | '/pateki-domovi'
     | '/vesti'
     | '/za-nas'
+    | '/komisii/$slug'
+    | '/komisii/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   KalendarRoute: typeof KalendarRoute
   KluboviRoute: typeof KluboviRoute
-  KomisiiRoute: typeof KomisiiRoute
+  KomisiiRoute: typeof KomisiiRouteWithChildren
   KontaktRoute: typeof KontaktRoute
   ObukiRoute: typeof ObukiRoute
   PatekiDomoviRoute: typeof PatekiDomoviRoute
@@ -212,14 +234,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ZaNasRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/komisii/': {
+      id: '/komisii/'
+      path: '/'
+      fullPath: '/komisii/'
+      preLoaderRoute: typeof KomisiiIndexRouteImport
+      parentRoute: typeof KomisiiRoute
+    }
+    '/komisii/$slug': {
+      id: '/komisii/$slug'
+      path: '/$slug'
+      fullPath: '/komisii/$slug'
+      preLoaderRoute: typeof KomisiiSlugRouteImport
+      parentRoute: typeof KomisiiRoute
+    }
   }
 }
+
+interface KomisiiRouteChildren {
+  KomisiiSlugRoute: typeof KomisiiSlugRoute
+  KomisiiIndexRoute: typeof KomisiiIndexRoute
+}
+
+const KomisiiRouteChildren: KomisiiRouteChildren = {
+  KomisiiSlugRoute: KomisiiSlugRoute,
+  KomisiiIndexRoute: KomisiiIndexRoute,
+}
+
+const KomisiiRouteWithChildren =
+  KomisiiRoute._addFileChildren(KomisiiRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   KalendarRoute: KalendarRoute,
   KluboviRoute: KluboviRoute,
-  KomisiiRoute: KomisiiRoute,
+  KomisiiRoute: KomisiiRouteWithChildren,
   KontaktRoute: KontaktRoute,
   ObukiRoute: ObukiRoute,
   PatekiDomoviRoute: PatekiDomoviRoute,
