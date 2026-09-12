@@ -254,6 +254,190 @@ export const DOKUMENTI = [
   { name: "Барање за категоризација на спортист", meta: "Министерство за спорт" },
 ];
 
+export type KomDokument = { name: string; url: string };
+
+/** Документи по комисија, преземени од fpsm.org.mk */
+export const KOMISIJA_DOKUMENTI: Record<string, KomDokument[]> = {
+  "statutarno-pravna": [
+    {
+      name: "Правилник на Статутарно-правната комисија",
+      url: "https://www.fpsm.org.mk/%d0%bf%d1%80%d0%b0%d0%b2%d0%b8%d0%bb%d0%bd%d0%b8%d0%ba-%d0%bd%d0%b0-%d1%81%d1%82%d0%b0%d1%82%d1%83%d1%82%d0%b0%d1%80%d0%bd%d0%be-%d0%bf%d1%80%d0%b0%d0%b2%d0%bd%d0%b0-%d0%ba%d0%be%d0%bc%d0%b8-2/",
+    },
+  ],
+  "planinarski-vodici": [
+    {
+      name: "Правилник за планинарски водичи при ФПСМ (16.06.2025, пречистен текст)",
+      url: "https://www.fpsm.org.mk/wp-content/uploads/2025/09/1.-Правилник-на-КПВ-16.06.2025_пречистен-текст.pdf",
+    },
+    {
+      name: "Правилник за лиценцирање на образовен кадар при КПВ",
+      url: "https://www.fpsm.org.mk/wp-content/uploads/2025/09/2.-Правилник-за-лиценцирање-на-образовен-кадар-при-Комисијата-за-планинарски-водичи-на-ФПСМ.pdf",
+    },
+    {
+      name: "Програма за обука на планинарски водичи во летни услови",
+      url: "https://www.fpsm.org.mk/wp-content/uploads/2025/09/3.-Програма-за-обука-на-планинарски-водичи-во-летни-услови-во-ФПСМ.pdf",
+    },
+    {
+      name: "Програма за обука на планинарски водичи во зимски услови",
+      url: "https://www.fpsm.org.mk/wp-content/uploads/2025/09/4.-Програма-за-обука-на-планинарски-водичи-во-зимски-услови.pdf",
+    },
+    {
+      name: "Протокол за лиценцирање планинарски водичи на ФПСМ",
+      url: "https://www.fpsm.org.mk/wp-content/uploads/2025/09/5.-Протокол-за-лиценцирање-планинарски-водичи-на-ФПСМ.pdf",
+    },
+    {
+      name: "Протокол за ментори на приправници за планинарски водичи",
+      url: "https://www.fpsm.org.mk/wp-content/uploads/2026/01/Протокол-за-МЕНТОРИ-на-приправници-за-планинарски-водичи-при-ФПСМ.pdf",
+    },
+    {
+      name: "Правилник за организација и водење планинарски акции, походи и маршеви",
+      url: "https://www.fpsm.org.mk/wp-content/uploads/2025/09/6.-Правилник-за-организација-и-водење-планинарски-акции-походи-и-маршеви-на-ФПСМ.pdf",
+    },
+    {
+      name: "Дисциплински правилник за водичите на ФПСМ",
+      url: "https://www.fpsm.org.mk/wp-content/uploads/2025/09/7.-Дисциплински-правилник-за-водичите-на-ФПСМ-конечен.pdf",
+    },
+    {
+      name: "Регистрирани UIAA планинарски водичи на ФПСМ",
+      url: "http://www.fpsm.org.mk/wp-content/uploads/2023/01/1-registrirani-planinarski-vodici-fpsm-18-01-2023-mk.pdf",
+    },
+    {
+      name: "Registered UIAA Mountain Guides at FPSM (English)",
+      url: "http://www.fpsm.org.mk/wp-content/uploads/2023/01/1-registered-mountaineering-guides-fpsm-18-01-2023-engl.pdf",
+    },
+    {
+      name: "Движење низ планина во зимски услови",
+      url: "http://www.fpsm.org.mk/wp-content/uploads/2021/12/dvizenje-niz-planina-vo-zimski-uslovi.pdf",
+    },
+    {
+      name: "За безбедна посета на планините во зима",
+      url: "http://www.fpsm.org.mk/wp-content/uploads/2021/12/za-bezbedna-poseta-na-planinite-vo-zima.pdf",
+    },
+    {
+      name: "Организирање на планинарски акции во зимска сезона",
+      url: "http://www.fpsm.org.mk/wp-content/uploads/2021/12/organiziranje-na-planinarski-akcii-vo-zimska-sezona.pdf",
+    },
+    {
+      name: "Препораки за организација на големи традиционални планинарски акции",
+      url: "http://www.fpsm.org.mk/wp-content/uploads/2017/04/preporaki-za-organizacija-vo-golemi-tradicionalni-planinarski-akcii.pdf",
+    },
+    {
+      name: "Употреба на мобилни телефони на планина",
+      url: "http://www.fpsm.org.mk/wp-content/uploads/2017/04/upotreba-na-mobilni-telefoni-vo-planina.pdf",
+    },
+    {
+      name: "Препораки од КПВ за користење радио комуникации",
+      url: "http://www.fpsm.org.mk/wp-content/uploads/2017/05/preporaki-od-kpv-za-koristenje-radio-komunikacii.pdf",
+    },
+    {
+      name: "За сигурна посета на планините",
+      url: "http://www.fpsm.org.mk/wp-content/uploads/2018/07/fpsm-za-sigurna-poseta-na-planinite.pdf",
+    },
+  ],
+  "planinarski-pateki": [
+    {
+      name: "Правилник на Комисијата за планинарски патеки",
+      url: "https://www.fpsm.org.mk/%d0%bf%d1%80%d0%b0%d0%b2%d0%b8%d0%bb%d0%bd%d0%b8%d0%ba-%d0%bd%d0%b0-%d0%ba%d0%be%d0%bc%d0%b8%d1%81%d0%b8%d1%98%d0%b0%d1%82%d0%b0-%d0%b7%d0%b0-%d0%bf%d0%bb%d0%b0%d0%bd%d0%b8%d0%bd%d0%b0%d1%80%d1%81/",
+    },
+    {
+      name: "Образец – опис на патека (2022)",
+      url: "https://www.fpsm.org.mk/wp-content/uploads/2025/09/OBRAZEC-OPIS-NA-PATEKA-2022-FINAL.docx",
+    },
+    {
+      name: "Закон за планински патеки",
+      url: "https://www.fpsm.org.mk/wp-content/uploads/2014/09/ZAKON-ZA-PLANINSKI-PATEKI.pdf",
+    },
+    {
+      name: "Прирачник за маркацисти",
+      url: "http://planinarskipateki.mk/wp-content/uploads/2018/01/PRIRACNIK-ZA-MARKACISTI-FINAL.pdf",
+    },
+    {
+      name: "Маркацисти 2018 – листа со контакти",
+      url: "https://www.fpsm.org.mk/%d1%81%d0%bf%d0%b8%d1%81%d0%be%d0%ba-%d0%bc%d0%b0%d1%80%d0%ba%d0%b0%d1%86%d0%b8%d1%81%d1%82%d0%b8-2018/",
+    },
+    {
+      name: "Брошура за планинарско-пешачки маркации низ Европа",
+      url: "https://www.fpsm.org.mk/%d0%b1%d1%80%d0%be%d1%88%d1%83%d1%80%d0%b0-%d0%b7%d0%b0-%d0%bf%d0%bb%d0%b0%d0%bd%d0%b8%d0%bd%d0%b0%d1%80%d1%81%d0%ba%d0%be-%d0%bf%d0%b5%d1%88%d0%b0%d1%87%d0%ba%d0%b8-%d0%bc%d0%b0%d1%80%d0%ba%d0%b0/",
+    },
+  ],
+  "planinarski-domovi": [
+    {
+      name: "Правилник на Комисијата за планинарски домови",
+      url: "https://www.fpsm.org.mk/wp-content/uploads/2026/01/pravilnik-kpd.pdf",
+    },
+    {
+      name: "Правилник за управување, работење и опремување на планинарските куќи",
+      url: "https://www.fpsm.org.mk/wp-content/uploads/2026/01/pravilnik-za-planinarski-kuki-so-vneseni-korekcii-.pdf",
+    },
+    {
+      name: "Формулар за опис на планинарски дом",
+      url: "https://www.fpsm.org.mk/wp-content/uploads/2026/01/formular-za-opis-na-pl.dom_.docx",
+    },
+  ],
+  "visokogorstvo-ekspedicii": [
+    {
+      name: "Правилник за Комисијата за високогорство и експедиционизам",
+      url: "https://www.fpsm.org.mk/wp-content/uploads/2024/10/Pravilnik-KV2.pdf",
+    },
+    {
+      name: "Правилник за категоризација",
+      url: "https://www.fpsm.org.mk/wp-content/uploads/2024/10/pravilnik-za-kategorizacija.pdf",
+    },
+    {
+      name: "Предлог категоризација за високогорско планинарење",
+      url: "https://www.fpsm.org.mk/wp-content/uploads/2024/10/Predlog-Kategorizacija-za-Visokogorsko-planinarenje-1.pdf",
+    },
+    {
+      name: "Критериуми за верификација на високогорски успех (20.02.2025)",
+      url: "https://www.fpsm.org.mk/wp-content/uploads/2025/09/Критериуми-за-верификација-на-високогорски-успех-20.02.2025.pdf",
+    },
+    {
+      name: "Формулар за високогорци",
+      url: "http://www.fpsm.org.mk/wp-content/uploads/2017/03/ФОРМУЛАР-ВИСОКОГОРЦИ.doc",
+    },
+  ],
+  "turno-skijanje": [
+    {
+      name: "Правилник на КТС за организирање и одржување натпревари во Македонскиот куп",
+      url: "https://www.fpsm.org.mk/wp-content/uploads/2024/12/KTS-pravilnik-2024_1-10.12.2024.pdf",
+    },
+    {
+      name: "Одлука за именување на Комисија за турно скијање",
+      url: "https://www.fpsm.org.mk/wp-content/uploads/2025/02/Одлука-за-именување-на-Комисија-за-турно-скијање.pdf",
+    },
+  ],
+  medicinska: [
+    {
+      name: "Правилник на Медицинската комисија",
+      url: "http://www.fpsm.org.mk/wp-content/uploads/2021/04/unnamed-file.pdf",
+    },
+  ],
+  mladi: [
+    {
+      name: "Правилник на Младинската комисија",
+      url: "http://www.fpsm.org.mk/wp-content/uploads/2017/04/pravilnik-mladinska-komisija.pdf",
+    },
+    {
+      name: "Пријава за Младинската комисија",
+      url: "http://www.fpsm.org.mk/wp-content/uploads/2017/04/prijava-mladinska-komisija-1.doc",
+    },
+    {
+      name: "Младински планинарски лидери",
+      url: "http://www.fpsm.org.mk/wp-content/uploads/2017/04/mladinski-planinarski-lideri.pdf",
+    },
+  ],
+  "rekreacija-sport": [
+    {
+      name: "Правилник за планинарска ориентација",
+      url: "http://www.fpsm.org.mk/wp-content/uploads/2022/04/pravilnik-fpsm-2020.pdf",
+    },
+    {
+      name: "Пријава за Лигата во ориентација",
+      url: "http://www.fpsm.org.mk/wp-content/uploads/2022/04/2022-planinarska-orientacija.docx",
+    },
+  ],
+};
+
 export const MEGUNARODNO = [
   { code: "UIAA", name: "Меѓународна унија на планинарски асоцијации" },
   { code: "EUMA", name: "Европска планинарска асоцијација" },
