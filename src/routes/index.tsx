@@ -181,10 +181,15 @@ function Index() {
         <h2 className="mt-2 text-3xl">Комисии на ФПСМ</h2>
         <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {KOMISII.slice(0, 6).map((k) => (
-            <div key={k.name} className="rounded-lg border border-border bg-card p-5">
+            <Link
+              key={k.slug}
+              to="/komisii/$slug"
+              params={{ slug: k.slug }}
+              className="card-lift block rounded-lg border border-border bg-card p-5"
+            >
               <p className="font-display text-base text-primary">{k.name}</p>
               <p className="mt-1 text-sm text-muted-foreground">{k.desc}</p>
-            </div>
+            </Link>
           ))}
         </div>
         <Link
