@@ -70,10 +70,10 @@ function KomisijaDetal() {
               <h3 className="font-display text-lg text-primary">Контакт со комисијата</h3>
               <p className="mt-2 text-sm text-muted-foreground">
                 Пишете на{" "}
-                <a className="text-signal hover:underline" href={`mailto:${KONTAKT.email}`}>
-                  {KONTAKT.email}
+                <a className="text-signal hover:underline" href={`mailto:${ORG.email}`}>
+                  {ORG.email}
                 </a>{" "}
-                со назнака за оваа комисија, или јавете се на {KONTAKT.phone}.
+                со назнака за оваа комисија, или јавете се на {ORG.phone}.
               </p>
             </div>
           </div>
