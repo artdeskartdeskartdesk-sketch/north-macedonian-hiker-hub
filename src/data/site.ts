@@ -5,9 +5,10 @@ import vest3 from "@/assets/vest-3.jpg";
 export const ORG = {
   name: "Федерација за планинарство на Северна Македонија",
   short: "ФПСМ",
-  address: "ул. Кузман Јосифовски Питу бр. 17, 1000 Скопје",
+  address:
+    "Дом на хуманитарни организации „Даре Џамбаз“, Бул. 11-ти Октомври 42, 1000 Скопје",
   email: "info@fpsm.org.mk",
-  phone: "+389 2 3246 000",
+  phone: "02 316 5540",
   site: "www.fpsm.org.mk",
 };
 

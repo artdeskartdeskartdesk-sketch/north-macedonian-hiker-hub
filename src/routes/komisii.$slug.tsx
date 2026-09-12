@@ -1,7 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { PageHeader } from "@/components/page-header";
-import { KONTAKT } from "@/data/site";
-import { KOMISII } from "@/data/site";
+import { KOMISII, ORG } from "@/data/site";
 
 export const Route = createFileRoute("/komisii/$slug")({
   loader: ({ params }) => {
