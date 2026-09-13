@@ -1,6 +1,14 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { PageHeader } from "@/components/page-header";
-import { KOMISII, ORG } from "@/data/site";
+import { KOMISII, KOMISIJA_DOKUMENTI, ORG } from "@/data/site";
+
+function vidNaDokument(url: string) {
+  const clean = url.split("?")[0] ?? "";
+  if (clean.endsWith(".pdf")) return "PDF";
+  if (clean.endsWith(".docx") || clean.endsWith(".doc")) return "DOC";
+  if (clean.endsWith(".xlsx") || clean.endsWith(".xls")) return "XLS";
+  return "ВЕБ";
+}
 
 export const Route = createFileRoute("/komisii/$slug")({
   loader: ({ params }) => {
@@ -44,6 +52,7 @@ function KomisijaNemaNajdena() {
 function KomisijaDetal() {
   const { komisija } = Route.useLoaderData();
   const drugi = KOMISII.filter((k) => k.slug !== komisija.slug).slice(0, 6);
+  const dokumenti = KOMISIJA_DOKUMENTI[komisija.slug] ?? [];
 
   return (
     <>
@@ -65,6 +74,33 @@ function KomisijaDetal() {
                 </li>
               ))}
             </ul>
+
+            {dokumenti.length > 0 && (
+              <div className="mt-12">
+                <h2 className="text-2xl">Документи на комисијата</h2>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  {dokumenti.length} документи — правилници, програми, протоколи и обрасци.
+                </p>
+                <ul className="mt-5 divide-y divide-border overflow-hidden rounded-lg border border-border bg-card">
+                  {dokumenti.map((d) => (
+                    <li key={d.url}>
+                      <a
+                        href={d.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-4 px-4 py-4 transition-colors hover:bg-secondary"
+                      >
+                        <span className="shrink-0 rounded border border-signal/40 px-2 py-1 font-display text-[11px] tracking-wide text-signal">
+                          {vidNaDokument(d.url)}
+                        </span>
+                        <span className="text-sm">{d.name}</span>
+                        <span className="ml-auto shrink-0 text-muted-foreground">↗</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             <div className="mt-10 rounded-lg border border-border bg-secondary p-6">
               <h3 className="font-display text-lg text-primary">Контакт со комисијата</h3>
