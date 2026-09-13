@@ -52,6 +52,7 @@ function KomisijaNemaNajdena() {
 function KomisijaDetal() {
   const { komisija } = Route.useLoaderData();
   const drugi = KOMISII.filter((k) => k.slug !== komisija.slug).slice(0, 6);
+  const dokumenti = KOMISIJA_DOKUMENTI[komisija.slug] ?? [];
 
   return (
     <>
