@@ -1,6 +1,14 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { PageHeader } from "@/components/page-header";
-import { KOMISII, ORG } from "@/data/site";
+import { KOMISII, KOMISIJA_DOKUMENTI, ORG } from "@/data/site";
+
+function vidNaDokument(url: string) {
+  const clean = url.split("?")[0] ?? "";
+  if (clean.endsWith(".pdf")) return "PDF";
+  if (clean.endsWith(".docx") || clean.endsWith(".doc")) return "DOC";
+  if (clean.endsWith(".xlsx") || clean.endsWith(".xls")) return "XLS";
+  return "ВЕБ";
+}
 
 export const Route = createFileRoute("/komisii/$slug")({
   loader: ({ params }) => {
