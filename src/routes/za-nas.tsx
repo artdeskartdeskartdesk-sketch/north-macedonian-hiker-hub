@@ -77,23 +77,28 @@ function ZaNas() {
           <h2 className="mt-2 text-3xl">Статут, правилници и обрасци</h2>
           <ul className="mt-8 grid gap-3 md:grid-cols-2">
             {DOKUMENTI.map((d) => (
-              <li
-                key={d.name}
-                className="flex items-center justify-between gap-4 rounded-lg border border-border bg-card px-5 py-4"
-              >
-                <span>
-                  <span className="block font-medium text-primary">{d.name}</span>
-                  <span className="block text-xs text-muted-foreground">{d.meta}</span>
-                </span>
-                <span className="shrink-0 rounded-md border border-border px-3 py-1 text-xs text-muted-foreground">
-                  PDF
-                </span>
+              <li key={d.name}>
+                <a
+                  href={d.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between gap-4 rounded-lg border border-border bg-card px-5 py-4 transition-colors hover:border-signal"
+                >
+                  <span>
+                    <span className="block font-medium text-primary">{d.name}</span>
+                    <span className="block text-xs text-muted-foreground">{d.meta}</span>
+                  </span>
+                  <span className="shrink-0 rounded-md border border-border px-3 py-1 text-xs text-muted-foreground">
+                    {d.url.toLowerCase().includes(".doc") ? "DOC" : "PDF"}
+                  </span>
+                </a>
               </li>
             ))}
           </ul>
           <p className="mt-6 text-sm text-muted-foreground">
-            Документите се достапни по барање во архивата на Федерацијата.
+            Документите се отвораат од официјалната архива на Федерацијата.
           </p>
+
         </div>
       </section>
     </>

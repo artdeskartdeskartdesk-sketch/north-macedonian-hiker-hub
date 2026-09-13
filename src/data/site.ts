@@ -244,15 +244,104 @@ export const KOMISII: Komisija[] = [
   },
 ];
 
-export const DOKUMENTI = [
-  { name: "Статут на ФПСМ", meta: "Бр. 01-90/5 од 19.10.2024" },
-  { name: "Правилник за работа на комисиите", meta: "Бр. 01-44/3 од 29.04.2021" },
-  { name: "Правилник на статутарно-правната комисија", meta: "Јануари 2026" },
-  { name: "Правилник на Комисијата за планинарски патеки", meta: "Јануари 2026" },
-  { name: "Правилник за планинарски водичи", meta: "Интегрирана лиценца" },
-  { name: "Пристапница за зачленување на клуб", meta: "Образец" },
-  { name: "Барање за категоризација на спортист", meta: "Министерство за спорт" },
+export const DOKUMENTI: { name: string; meta: string; url: string }[] = [
+  {
+    name: "Статут на ФПСМ (пречистен текст)",
+    meta: "19.10.2024 · PDF",
+    url: "https://www.fpsm.org.mk/wp-content/uploads/2025/02/%D0%A1%D1%82%D0%B0%D1%82%D1%83%D1%82-%D0%BF%D1%80%D0%B5%D1%87%D0%B8%D1%81%D1%82%D0%B5%D0%BD-%D1%82%D0%B5%D0%BA%D1%81%D1%82-19.10.2024.pdf",
+  },
+  {
+    name: "STATUTI i Federatës Bjeshkatare (алб.)",
+    meta: "Статут на албански · PDF",
+    url: "http://www.fpsm.org.mk/wp-content/uploads/2023/02/statut-statuti-alb..pdf",
+  },
+  {
+    name: "Кодекс на честа на македонските планинари",
+    meta: "PDF",
+    url: "https://www.fpsm.org.mk/wp-content/uploads/2026/07/%D0%9A%D0%9E%D0%94%D0%95%D0%9A%D0%A1-%D0%9D%D0%90-%D0%A7%D0%95%D0%A1%D0%A2%D0%90-%D0%9D%D0%90-%D0%9C%D0%90%D0%9A%D0%95%D0%94%D0%9E%D0%9D%D0%A1%D0%9A%D0%98%D0%A2%D0%95-%D0%9F%D0%9B%D0%90%D0%9D%D0%98%D0%9D%D0%90%D0%A0%D0%98.pdf",
+  },
+  {
+    name: "Органограм на ФПСМ",
+    meta: "DOC",
+    url: "http://www.fpsm.org.mk/wp-content/uploads/2023/01/unnamed-file.doc",
+  },
+  {
+    name: "Правилник за работа на комисиите во ФПСМ",
+    meta: "PDF",
+    url: "http://www.fpsm.org.mk/wp-content/uploads/2021/05/unnamed-file.pdf",
+  },
+  {
+    name: "Правилник за медицинска заштита во ФПСМ",
+    meta: "PDF",
+    url: "http://www.fpsm.org.mk/wp-content/uploads/2021/04/unnamed-file.pdf",
+  },
+  {
+    name: "Правилник за суд на честа",
+    meta: "DOC",
+    url: "http://www.fpsm.org.mk/wp-content/uploads/2022/02/unnamed-file.doc",
+  },
+  {
+    name: "Правилник за утврдување на надоместоци",
+    meta: "2025 · PDF",
+    url: "https://www.fpsm.org.mk/wp-content/uploads/2025/02/%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%BD%D0%B8%D0%BA-%D0%B7%D0%B0-%D1%83%D1%82%D0%B2%D1%80%D0%B4%D1%83%D0%B2%D0%B0%D1%9A%D0%B5-%D0%BD%D0%B0-%D0%BD%D0%B0%D0%B4%D0%BE%D0%BC%D0%B5%D1%81%D1%82%D0%BE%D1%86%D0%B8-2025.pdf",
+  },
+  {
+    name: "Спортист — спортска надеж, младинска категорија",
+    meta: "Правилник · PDF",
+    url: "http://www.fpsm.org.mk/wp-content/uploads/2019/08/pravilnik-sportist-sportska-nadez-mladinska-kategorija.pdf",
+  },
+  {
+    name: "Предлог програма за 2023–2024",
+    meta: "PDF",
+    url: "http://www.fpsm.org.mk/wp-content/uploads/2024/01/2023_24.pdf",
+  },
+  {
+    name: "Извештај за работа на ФПСМ 2022–2023",
+    meta: "PDF",
+    url: "http://www.fpsm.org.mk/wp-content/uploads/2024/01/2022_2023.pdf",
+  },
+  {
+    name: "Заклучоци на Надзорниот одбор",
+    meta: "2021 · PDF",
+    url: "http://www.fpsm.org.mk/wp-content/uploads/2023/01/nadzoren-izvestaj-2021.pdf",
+  },
+  {
+    name: "Извештај за работа на Претседателството 2021",
+    meta: "DOCX",
+    url: "http://www.fpsm.org.mk/wp-content/uploads/2023/01/2021.docx",
+  },
+  {
+    name: "Годишен извештај АСПИ 2022",
+    meta: "PDF",
+    url: "http://www.fpsm.org.mk/wp-content/uploads/2023/01/2022.pdf",
+  },
+  {
+    name: "Годишен извештај АСПИ 2023",
+    meta: "PDF",
+    url: "http://www.fpsm.org.mk/wp-content/uploads/2024/02/2023-.pdf",
+  },
+  {
+    name: "Годишна сметка на ФПСМ за 2022",
+    meta: "Централен регистар · PDF",
+    url: "https://www.fpsm.org.mk/wp-content/uploads/2025/02/%D0%A4%D0%9F%D0%A1%D0%9C-%D0%9F%D0%BE%D0%B4%D0%BD%D0%B5%D1%81%D1%83%D0%B2%D0%B0%D1%9A%D0%B5-%D0%93%D0%BE%D0%B4%D0%B8%D1%88%D0%BD%D0%B8-%D0%A1%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D1%80%D0%B5%D0%BA%D1%83-%D0%92%D0%B5%D0%B1-.2022.pdf",
+  },
+  {
+    name: "Годишна сметка на ФПСМ за 2023",
+    meta: "Централен регистар · PDF",
+    url: "https://www.fpsm.org.mk/wp-content/uploads/2025/02/%D0%A4%D0%9F%D0%A1%D0%9C-%D0%9F%D0%BE%D0%B4%D0%BD%D0%B5%D1%81%D1%83%D0%B2%D0%B0%D1%9A%D0%B5-%D0%93%D0%BE%D0%B4%D0%B8%D1%88%D0%BD%D0%B8-%D0%A1%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D1%80%D0%B5%D0%BA%D1%83-%D0%92%D0%B5%D0%B1-%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D0%B5%D0%BD-%D0%A0%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D0%B0%D1%80-%D0%BD%D0%B0-%D0%A0%D0%B5%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0-%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D0%B0-%D0%9C%D0%B0%D0%BA%D0%B5%D0%B4%D0%BE%D0%BD%D0%B8%D1%98%D0%B0-2023.pdf",
+  },
+  {
+    name: "Закон за здруженијата на граѓани и фондациите",
+    meta: "Службен весник · PDF",
+    url: "https://ener.gov.mk/files/propisi_files/documents/277_%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B7%D0%B4%D1%80%D1%83%D0%B6%D0%B5%D0%BD%D0%B8%D1%98%D0%B0%D1%82%D0%B0%20%D0%BD%D0%B0%20%D0%B3%D1%80%D0%B0%D1%93%D0%B0%D0%BD%D0%B8%20%D0%B8%20%D1%84%D0%BE%D0%BD%D0%B4%D0%B0%D1%86%D0%B8%D0%B8%D1%82%D0%B5%20_%20%D0%A1%D0%BB.pdf",
+  },
+  {
+    name: "Закон за слободен пристап до информации од јавен карактер",
+    meta: "PDF",
+    url: "https://aspi.mk/wp-content/uploads/2020/09/%D0%97%D0%90%D0%9A%D0%9E%D0%9D-%D0%97%D0%90-%D0%A1%D0%9F%D0%98-%D0%9F%D0%94%D0%A4.pdf",
+  },
 ];
+
 
 export type KomDokument = { name: string; url: string };
 
